@@ -73,22 +73,22 @@ All of these functions are available globally under `ett`. All functions except
 - `test` (string) - The name of the test.
 - `msg` (string) - A message associated with this test.
 
-### `output(...args)`
+### `ett.output(...args)`
 Generic textual output in the UI.
 
-### `pass(test, msg)`
+#### `ett.pass(test, msg)`
 Outputs a single line to the output box with a green checkmark.
 
-### `fail(test, msg)`
+#### `ett.fail(test, msg)`
 Outputs a single line to the output box with a red stop sign.
 
-### `mustBeTrue(thing, test, msg)`
+#### `ett.mustBeTrue(thing, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is true.
 
-### `mustBeTruthy(thing1, thing2, test, msg)`
+#### `ett.mustBeTruthy(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is truthy.
 
-### `isEqual(thing1, thing2, test, msg)`
+#### `ett.isEqual(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the two given things are strictly
 equal.
 
