@@ -10,6 +10,8 @@ browser, so that your ES6 imports work out of the box.
 For testing JavaScript that uses CommonJS packages, I suggest the well
 established [node-tap](https://node-tap.org/) project instead.
 
+![alt text](screenshots/simple.png)
+
 ## Getting Started
 
 ### 1. Install with npm
