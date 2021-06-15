@@ -73,24 +73,39 @@ All of these functions are available globally under `ett`. All functions except
 - `test` (string) - The name of the test.
 - `msg` (string) - A message associated with this test.
 
-### `ett.output(...args)`
+#### `output(...args)`
 Generic textual output in the UI.
 
-#### `ett.pass(test, msg)`
+#### `pass(test, msg)`
 Outputs a single line to the output box with a green checkmark.
 
-#### `ett.fail(test, msg)`
+#### `fail(test, msg)`
 Outputs a single line to the output box with a red stop sign.
 
-#### `ett.mustBeTrue(thing, test, msg)`
+#### `mustBeTrue(thing, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is true.
 
-#### `ett.mustBeTruthy(thing1, thing2, test, msg)`
+#### `mustBeTruthy(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is truthy.
 
-#### `ett.isEqual(thing1, thing2, test, msg)`
+#### `isEqual(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the two given things are strictly
 equal.
+
+## Usage example
+
+```javascript
+try {
+  doSomething()
+  ett.pass('Test passed')
+} catch (e) { ett.fail('Test failed') }
+```
+
+```javascript
+  let car = carFactory()
+  ett.mustBeTrue(car instanceof Car, 'carFactory() returned a Car')
+  ett.mustBeTrue('make' in car, 'Returned car has the make')
+```
 
 ## Questions and Answers
 
