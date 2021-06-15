@@ -84,4 +84,18 @@ Invokes `pass()` or `fail()` depending on if the given value is true.
 Invokes `pass()` or `fail()` depending on if the given value is truthy.
 
 ### `mustBeEqual()`
-Invokes `pass()` or `fail()` depending on if the two given things are strictly equal.
+Invokes `pass()` or `fail()` depending on if the two given things are strictly
+equal.
+
+## Questions and Answers
+
+#### How do I use html/css/image files in my tests?
+
+Express is serving your entire project root as statically available files. So,
+to include anything else you might need, just use paths relative to the root.
+
+To load an image that's located at `test/images/cat.jpg`
+
+```html
+<img src="test/images/cat.jpg">
+```
