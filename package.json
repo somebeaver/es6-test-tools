@@ -7,8 +7,10 @@
     "docs": "jsdoc2md src/Router.js > DOCS.md",
     "test": "tap"
   },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "express": "^4.17.1",
     "jsdoc-to-markdown": "^6.0.0",
     "tap": "^14.11.0"
   }
