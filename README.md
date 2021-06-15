@@ -67,25 +67,28 @@ want to run your test suite in.
 
 ## Testing Tools
 
-All of these functions are available globally under `ett`. For example,
-`ett.mustBeTrue()`.
+All of these functions are available globally under `ett`. All functions except
+`output()` take the same two args at the end:
 
-### `output()`
-Generic textual output in the UI and console.
+- `test` (string) - The name of the test.
+- `msg` (string) - A message associated with this test.
 
-### `pass()`
+### `output(...args)`
+Generic textual output in the UI.
+
+### `pass(test, msg)`
 Outputs a single line to the output box with a green checkmark.
 
-### `fail()`
+### `fail(test, msg)`
 Outputs a single line to the output box with a red stop sign.
 
-### `mustBeTrue()`
+### `mustBeTrue(thing, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is true.
 
-### `mustBeTruthy()`
+### `mustBeTruthy(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the given value is truthy.
 
-### `mustBeEqual()`
+### `isEqual(thing1, thing2, test, msg)`
 Invokes `pass()` or `fail()` depending on if the two given things are strictly
 equal.
 
