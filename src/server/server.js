@@ -7,10 +7,10 @@ exports.start = function(testDir) {
 
   const app = express()
 
-  // assuming we installed in the node_modules dir
-  const publicDir = path.normalize(__dirname + '/../../')
+  // assuming we got installed in the node_modules dir
+  const publicDir = path.normalize(__dirname + '/../../../../')
 
-  console.log(publicDir)
+  console.log('Server is serving this directory as the static root:', publicDir)
 
   app.use(express.static(publicDir))
 
