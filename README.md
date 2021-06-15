@@ -29,8 +29,9 @@ npm i "github:somebeaver/es6-test-tools"
 ### 3. Create the test suite
 
 You must create a folder in your project root called `test`. Inside of it,
-create a file called `es6-test-tools-suite.js`. You can run tests directly in
-here, or use it to import other tests. ES6 imports/exports work here.
+create a file called `es6-test-tools-suite.js`. This file will be served to the
+browser, and it is the root of your testing suite. Use it to run tests directly,
+or import other ES6 test modules directly.
 
 All of the testing tools are available to you globally under `window.ett`.
 
@@ -81,3 +82,6 @@ Invokes `pass()` or `fail()` depending on if the given value is true.
 
 ### `mustBeTruthy()`
 Invokes `pass()` or `fail()` depending on if the given value is truthy.
+
+### `mustBeEqual()`
+Invokes `pass()` or `fail()` depending on if the two given things are strictly equal.
