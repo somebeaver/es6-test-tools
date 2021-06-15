@@ -94,6 +94,8 @@ equal.
 
 ## Usage example
 
+Using `ett` functions will automatically push test results to the UI.
+
 ```javascript
 try {
   doSomething()
@@ -119,3 +121,7 @@ To load an image that's located at `test/images/cat.jpg`
 ```html
 <img src="test/images/cat.jpg">
 ```
+
+## License
+
+Licensed under the Mozilla Public License 2.0.
