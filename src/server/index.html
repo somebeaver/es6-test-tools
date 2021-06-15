@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>router.js Tests</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font: sans-serif;
+      }
+
+      #output {
+        padding: 10px;
+        max-height: 70vh;
+        overflow-y: scroll;
+        border-radius: 6px;
+        background: #eee;
+      }
+
+      #playground {
+        max-height: 30vh;
+      }
+
+      ul, ol, li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="output"></div> 
+
+    <div id="playground">
+      <div id="perm1" class="perm odd"></div>
+      <div id="perm2" class="perm even"></div>
+      <div id="perm3" class="perm odd"></div>
+      <div id="perm4" class="perm even"></div>
+      <div id="perm5" class="perm odd"></div>
+      <div id="perm6" class="perm even"></div>
+
+      <ul class="animals">
+        <li id="cat" class="perm animal">
+          <ol>
+            <li class="kitten animal baby"></li>
+            <li class="kitten animal baby"></li>
+          </ol>
+        </li>
+        <li id="dog" class="perm animal">
+          <ol>
+            <li class="puppy animal baby"></li>
+            <li class="puppy animal baby"></li>
+            <li class="puppy animal baby"></li>
+          </ol>
+        </li>
+        <li id="bird" class="perm animal"></li>
+        <li id="rabbit" class="perm animal"></li>
+        <li id="snake" class="perm animal"></li>
+        <li id="bird" class="perm animal"></li>
+      </ul>
+    </div>
+
+    <script src="node_modules/es6-test-tools/src/tools/index.js" type="module"></script>
+    <script src="test/es6-test-tools-suite.js" type="module"></script>
+  </body>
+</html>
